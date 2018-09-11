@@ -9,6 +9,7 @@
       "es6",
       "esnext"
     ],
+    "jsx": "react",
     "sourceMap": true,
     "rootDir": "src",
     "declaration": true,
@@ -28,12 +29,14 @@
     },
     "typeRoots": [
       "./node_modules/@types",
-      "./src/@types"
+      "./src/types"
     ]
   },
   "exclude": [
     "lib",
     "node_module",
-    "config"
+    "config",
+    "scripts",
+    "styles"
   ]
 }
