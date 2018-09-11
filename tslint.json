@@ -1,0 +1,15 @@
+{
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**/*.ts",
+      "node_modules/**/*,tsx",
+      "coverage/lcov-report/*.js",
+      "scripts/*",
+      "lib/*"
+    ]
+  },
+  "rules": {
+    "no-any": true
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "name": "@foxer-360/react-package-boilerplate",
+  "version": "0.1.0",
+  "description": "Simple boilerplate for TypeScript package with React.",
+  "main": "lib/index.js",
+  "repository": "git@github.com:Foxer-360/react-package-boilerplate.git",
+  "author": "Filip Suchý <nevim42@gmail.com>",
+  "typings": "lib/@types",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "babel": "babel lib --out-dir lib",
+    "build": "yarn up && yarn compile && yarn babel && yarn resolveDefs && yarn buildCss",
+    "buildCss": "node scripts/buildCss.js",
+    "clean": "rm -rf ./lib",
+    "compile": "tsc --build tsconfig.build.json",
+    "removeTypes": "rm -rf ./node_modules/@types",
+    "rebuild": "yarn clean && yarn build && yarn removeTypes",
+    "resolveDefs": "node scripts/resolveDefinitions.js",
+    "test": "jest",
+    "up": "yarn install --check-files"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-typescript": "^7.0.0",
+    "@types/jest": "^23.3.2",
+    "@types/node": "^10.9.4",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "jest": "^23.6.0",
+    "node-sass": "^4.9.3",
+    "ts-jest": "^23.1.4",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "typescript": "^3.0.3"
+  },
+  "peerDependencies": {
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "tests\\/.*(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.test.json"
+      }
+    },
+    "moduleNameMapper": {
+      "@source/(.*)": "<rootDir>/src/$1"
+    }
+  }
+}
