@@ -5,8 +5,8 @@
       "node_modules/**/*.ts",
       "node_modules/**/*,tsx",
       "coverage/lcov-report/*.js",
-      "scripts/*",
-      "lib/*"
+      "scripts/**/*",
+      "lib/**/*"
     ]
   },
   "rules": {
