@@ -1,5 +1,5 @@
 {
-  "name": "@foxer-360/react-package-boilerplate",
+  "name": "@foxer360/react-package-boilerplate",
   "version": "0.1.0",
   "description": "Simple boilerplate for TypeScript package with React.",
   "main": "lib/index.js",
@@ -27,6 +27,7 @@
     "@babel/plugin-proposal-class-properties": "^7.0.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.0.0",
     "@types/jest": "^23.3.2",
     "@types/node": "^10.9.4",

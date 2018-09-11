@@ -3,7 +3,7 @@
   "linterOptions": {
     "exclude": [
       "node_modules/**/*.ts",
-      "node_modules/**/*,tsx",
+      "node_modules/**/*.tsx",
       "coverage/lcov-report/*.js",
       "scripts/**/*",
       "lib/**/*"
