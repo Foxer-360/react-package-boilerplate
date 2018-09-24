@@ -11,7 +11,7 @@ var pathRegEx = /@source(.*)';/;
 function processFile(fileName) {
   var fileContent = fs.readFileSync(fileName).toString();
   var matches = fileContent.match(importRegEx);
-  var filePath = fileName.replace(/[^\/]*\.d\.ts/, '');
+  var filePath = fileName.replace(/[^/]*\.d\.ts/, '');
   var someChange = false;
 
   if (!matches) return;
